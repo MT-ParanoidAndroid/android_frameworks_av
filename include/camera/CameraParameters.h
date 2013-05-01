@@ -211,6 +211,10 @@ public:
     // The height (in pixels) of EXIF thumbnail in Jpeg picture.
     // Example value: "384". Read/write.
     static const char KEY_JPEG_THUMBNAIL_HEIGHT[];
+
+#ifdef QCOM_HARDWARE
+    static const char KEY_SUPPORTED_THUMBNAIL_SIZES[];
+#endif
     // Supported EXIF thumbnail sizes (width x height). 0x0 means not thumbnail
     // in EXIF.
     // Example value: "512x384,320x240,0x0". Read only.
@@ -662,6 +666,9 @@ public:
     static const char KEY_FACE_DETECTION[];
     static const char KEY_SUPPORTED_FACE_DETECTION[];
 
+    static const char KEY_SHUTTER_SOUND[];
+    static const char KEY_BRIGHTNESS_MODE[];
+
     //Redeye Reduction
     static const char KEY_REDEYE_REDUCTION[];
     static const char KEY_SUPPORTED_REDEYE_REDUCTION[];
@@ -698,6 +705,9 @@ public:
     static const char EFFECT_EMBOSS[];
     static const char EFFECT_SKETCH[];
     static const char EFFECT_NEON[];
+    static const char EFFECT_NEGATIVE_SEPIA[];
+    static const char EFFECT_PASTEL[];
+    static const char EFFECT_BLUE[];
 
     // Values for Touch AF/AEC
     static const char TOUCH_AF_AEC_OFF[] ;
@@ -873,6 +883,23 @@ public:
     static const char KEY_SATURATION[];
     static const char KEY_MAX_SATURATION[];
     static const char KEY_MIN_SATURATION[];
+
+//
+// KD 9/28 - Add reuqired parameters for Froyo on the Triumph - should not
+// break other cameras.
+//
+    static const char WIDESCREEN_4_3[];
+    static const char WIDESCREEN_5_3[];
+    static const char KEY_MAX_BRIGHTNESS[];
+    static const char KEY_SUPPORTED_WIDESCREEN[];
+    static const char KEY_BRIGHTNESS[];
+    static const char KEY_WIDESCREEN[];
+    static const char KEY_DEF_SHARPNESS[];
+    static const char KEY_DEF_CONTRAST[];
+    static const char KEY_DEF_BRIGHTNESS[];
+    static const char KEY_MIN_BRIGHTNESS[];
+    static const char KEY_DEF_SATURATION[];
+// end
 
     static const char KEY_HISTOGRAM[] ;
     static const char KEY_SUPPORTED_HISTOGRAM_MODES[] ;
